@@ -1,0 +1,41 @@
+# 서식문자 %사용
+# %d: 정수
+# %s: 문자열
+# %f: 실수
+# %o: 8진수
+# %x: 16진수
+
+age= 17
+print('나이는 %d' %(age))
+
+name, age= 'SY', 17
+print('이름은 %s, 나이는 %d살' %(name, age))
+
+# 구구단
+for j in range(2, 10):                       # 세밀하게 변하는 부분 먼저
+  print('{}단'.format(j))
+  for i in range(1, 10):                    # 그 다음 크게 변하는 부분
+    print('{} x {} = {}'.format(j, i, j*i)) # 계산은 반복문으로 처리하지 않음
+    
+
+# 명단리스트에 번호매겨서 출력
+names= ['SY', 'KJH', 'SJH', 'MR']
+for i in range(len(names)):
+  print('%번: %s' % (i+1, names[i))
+  
+# f'문자열{변수명}'
+num= 123
+print(f'{num} 입니다')
+
+  
+# 문자열을 한 글자씩 출력
+s= 'ABCD'
+
+for c in s:
+  print(f'{c}')
+  
+# 딕셔너리 값을 출력: value값 출력 위해 key 활용
+
+d= {'name':'MR', 'weight':20}
+# 이름: 미란, 몸무게:20
+print(f'이름: {d["name"]}, 몸무게: {d["weight"]}')
