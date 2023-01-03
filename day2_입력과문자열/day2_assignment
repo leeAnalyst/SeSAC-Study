@@ -1,0 +1,20 @@
+# 1
+num1= float(input())
+num2= float(input())
+print("수*수= ", num1*num2)
+
+# 2
+s= 'Pennsylvania'
+if input() in s:
+  print("True")
+else:
+  print("False")
+  
+# 3 : 선생님...이건 정말 모르겠어요ㅠㅠ 죄송합니다....
+n = int(input())
+for i in range(n):
+    r, s = input().split()
+    p = ''
+    for j in s:
+        p += int(r) * j
+    print(p)
