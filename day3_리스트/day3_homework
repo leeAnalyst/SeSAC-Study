@@ -1,0 +1,36 @@
+ # 1번문제
+ def solution(numbers):
+    for num_idx in range(len(numbers)):
+        numbers[num_idx] *= 2
+    return numbers
+    
+# 1번문제( 답안지 보고 학습)    
+def solution(numbers):   
+    return([num*2 for num in numbers])
+
+
+# 2번문제 : 차마 input받는것을 구현하지 못하엿읍니다.
+li = [8, 10, 5, 15, 100]
+print(len(li))
+
+li1 = []
+for num in li:
+    if num % 2 == 1:
+        odd = num*2
+        li1.append(odd)
+    else:
+        even = num//2
+        li1.append(even)
+print(li1)
+
+
+
+# 3번문제
+def solution(n):
+    num_sum = 0
+    for num in range(0,n+1,2):
+        num_sum += num
+    return num_sum   
+ 
+ # 3번 문제의 고생해서 얻은 답.
+ return sum([num for num in range(0, n+1, 2)])
