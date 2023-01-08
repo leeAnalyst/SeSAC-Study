@@ -1,0 +1,21 @@
+# 1
+
+def recursive(n):
+  if(n > 20):
+    print("20 이하의 자연수를 입력하세요")
+  else:
+    return "recursive\n"*n
+    recursive(n-1)
+n = int(input())
+print(recursive(n))
+
+# 2
+
+def fibonacci(n):
+  if(n > 50):
+    print("50 이하의 자연수를 입력하세요")
+  else:
+    return (n-1) + n 
+    fibonacci(n-1)
+n = int(input())
+print(fibonacci(n))
