@@ -1,0 +1,54 @@
+# 1
+# 생성자에서 종목명, 종목코드, PER, PBR, 배당수익률을 입력 받을 수 있도록 생성자를 수정하세요. PER, PBR, 배당수익률은 float 타입입니다.
+
+class Stock:
+    def __init__(self, name, code, PER, PBR, 배당수익률):
+        self.name = name
+        self.code = code
+        self.PER = float(PER)
+        self.PBR = float(PBR)
+        self.배당수익률 = float(배당수익률)
+    
+    def set_name(self, name):
+        self.name = name
+        
+    def set_code(self, code):
+        self.code = code
+        
+    def get_name(self):
+        return self.name
+
+    def get_code(self):
+        return self.code
+    
+        
+삼성 = Stock('삼성전자',	'005930',	'15.79',	'1.33', '2.83')
+# print(삼성.배당수익률)
+# print(삼성.PER)
+# print(삼성.PBR)
+
+
+# 2
+# 아래의 표를 참조하여 3종목에 대해 객체를 생성하고 이를 파이썬 리스트에 저장하세요. 
+# 파이썬 리스트에 저장된 각 종목에 대해 for 루프를 통해 종목코드와 PER을 출력해보세요.
+
+# 종목명	종목코드	PER	PBR	배당수익률
+# 삼성전자	005930	15.79	1.33	2.83
+# 현대차	005380	8.70	0.35	4.27
+# LG전자	066570	317.34	0.69	1.37
+
+class Stock:
+    def __init__(self, name, code, PER, PBR, 배당수익률):
+        self.name = input('name : ')
+        self.code = int(input('code : '))
+        self.PER = float(input('PER : '))
+        self.PBR = float(input('PBR : '))
+        self.배당수익률 = float(input('배당수익률 : '))
+        
+li=[]
+for i in range(3):
+  li.append(Stock('name', 'code', 'PER', 'PBR', '배당수익률'))
+print(li)
+
+for s in li:
+  print('{0:0>6}'.format(s.code), s.PER)
