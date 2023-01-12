@@ -1,0 +1,57 @@
+# 도전;;; 실패ㅜㅜ
+def solution(arr):
+  n= int(input())
+  arr = []
+
+  if n >= 10:
+      print('0보다 크거나 같고 9보다 작거나 같은 정수를 입력하세요')
+  else:
+      for i in range(n):
+          input_values= input().split()
+          arr.append(input_values)
+      a= sum(arr, [])
+      list_a =  list(map(int, a))
+      print(list_a)
+          
+  result = []
+  for value in arr:
+      if value not in result:
+          result.append(value)
+  result.append(arr[-1])
+
+  b= sum(result, [])
+  list_b =  list(map(int, b))
+  return list_b
+
+print(solution([1, 1, 3, 3, 0, 1, 1]))
+
+#####
+7
+1
+1
+3
+3
+0
+1
+1
+[1, 1, 3, 3, 0, 1, 1]
+[1, 3, 0, 1]
+
+
+# 정답
+
+def solution(s):                                         # solution 함수생성,  매개변수(parameter) s
+
+    result = []                                          # 빈 리스트 result 초기화
+    for c in s:                                          # s 배열에 있는 원소 순서대로  하나씩  첫번째 원소부터 마지막 원소까지 c변수에 대입
+        if (len(result) == 0) or (result[-1] != c):      # 만약 result리스트 원소의 갯수가 0 이거나 result리스트의 맨 마지막 원소가 s배열 원소와 같지 않다면
+            result.append(c)                             # result리스트에  해당 원소 원소하나씩 추가
+    return result                                        # result리스트 반환
+
+# 함수에 인수(argument) 입력하여 출력해봄
+print(solution([1, 1, 3, 3, 0, 1, 1]))
+print(solution([4, 4, 4, 3, 3]))
+
+#####
+[1, 3, 0, 1]
+[4, 3]
