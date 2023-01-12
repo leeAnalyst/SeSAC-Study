@@ -1,0 +1,22 @@
+n= int(input())
+arr = []
+
+if n >= 10:
+    print('0보다 크거나 같고 9보다 작거나 같은 정수를 입력하세요')
+else:
+    for i in range(n):
+        input_values= input().split()
+        arr.append(input_values)
+    a= sum(arr, [])
+    list_a =  list(map(int, a))
+    print(list_a)
+        
+result = []
+for value in arr:
+    if value not in result:
+        result.append(value)
+result.append(arr[-1])
+
+b= sum(result, [])
+list_b =  list(map(int, b))
+print(list_b) 
