@@ -8,6 +8,7 @@ def bubble_sort(array):                                     # 함수  bubble_sor
     return array                                            # 하는 것을 array의 크기(원소 개수)만큼 반복하여 정렬한 array 반환
 
 
+
 # 삽입정렬 : 처리되지 않은 데이터를 하나씩 골라 확인하면서 데이터가 어느 위치에 들어가는게 맞을 것인가를 매번 계산해서 적절한 위치에 들어갈 수 있도록 해줌
 
 def insert_sort(array):                                      # 함수 insert_sort선언 매개변수 array
@@ -16,6 +17,7 @@ def insert_sort(array):                                      # 함수 insert_sor
             if array[j-1] > array[j]:                        # j번째 원소가 j왼쪽 원소와 비교해서 작다면
                 array[j-1], array[j] = array[j], array[j-1]  # j와 j-1의 순서 변경 (비교해서 안 작다면 현재 위치에 멈추고, 오름차순 정렬아닌 아닌 원소가 어디로 삽입될지 다시 판단)
     return array                                             # 하는 것을 인덱스1부터(첫번째 데이터는 그 자체로 정렬이 되어있다고 판단하고 두번째 부터) "array원소개수 - 1" 번 반복하여 정렬한 array 반환
+
 
 
 # 선택정렬 : 탐색 범위 내에 처리되지 않은 데이터 중에서 가장 작은 데이터를 골라서 현재 범위에서(정렬이 필요한, 더 정렬이 필요없는 데이터는 더 앞에) 가장 앞에 있는 데이터와 바꾸는 것을 반복 - 매번 선형 탐색을 수행함
@@ -28,6 +30,7 @@ def selection_sort(array):                                  # selection_sort함�
               min_idx = j                                   # 가장 작은데이터는 j가 됨
       array[min_idx], array[j] = array[i], array[min_idx]   # 가장 앞쪽 원소와 가장 작은 원소 위치를 서로 바뀌게 함 (스와프 연산)
     return array                                            # 안쪽 반복문의 수행이 끝났을 때 min_idx에 담기게 되는 것을 i=0 부터 (array갯수-1)번 만큼 반복하여 정렬된 array를 출력
+    
     
     
 #  병합정렬 재귀함수 사용
@@ -64,6 +67,9 @@ def merge(left, right):
             right = right[1:]                           # 삭제
     return result                                # result리스트 반환
     
+    
+    
+### 파이썬의 정렬
 
 # sort(), sort(reverse=False):오름차순 정렬
 # 기존 리스트를 변경
