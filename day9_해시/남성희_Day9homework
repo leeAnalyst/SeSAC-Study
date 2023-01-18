@@ -1,0 +1,76 @@
+# 숙제문제 1
+
+participant = ["leo", "kiki", "eden"]
+completion = ["eden", "kiki"]
+dic = {}
+
+for person in participant:
+    if person in dic:
+        dic[person] += 1
+    else:
+        dic[person] = 1
+
+for person in completion:
+    if person in dic:
+        dic[person] -= 1
+    else:
+        pass
+
+for k, v in dic.items():
+    if v != 0:
+        print(k)
+    else:
+        pass
+        
+        
+ # 예제문제 1
+ 
+ n = int(input())
+dic = {}
+
+for i in range(n):
+    word = input()
+    if word in dic:
+        dic[word]+=1
+    else:
+        dic[word]=1
+
+print(dic)
+for j in range(n-1):
+    word = input()
+    if word in dic:
+        dic[word]-=1
+
+print(dic)
+for k, v in dic.items():
+    if v == 1:
+        print(k)
+        
+# print([k for k, v in dic.items() if v==1][0])
+
+
+# 예제문제 2
+
+n = int(input())
+dic = {}
+
+for i in range(n):
+    word = input()
+    if word in dic:
+        dic[word]+=1
+    else:
+        dic[word]=1
+
+print(dic)
+for j in range(n-1):
+    word = input()
+    if word in dic:
+        dic[word]-=1
+
+print(dic)
+for k, v in dic.items():
+    if v == 1:
+        print(k)
+        
+# print([k for k, v in dic.items() if v==1][0])
+ 
