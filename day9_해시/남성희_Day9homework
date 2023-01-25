@@ -25,7 +25,7 @@ for k, v in dic.items():
         
  # 예제문제 1
  
- n = int(input())
+n = int(input())
 dic = {}
 
 for i in range(n):
