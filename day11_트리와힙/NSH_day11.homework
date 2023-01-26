@@ -1,0 +1,17 @@
+# 11일차 숙제
+
+
+n = int(input())
+heap = []
+
+for i in range(n):
+    num = int(input())
+    if num == 0:
+        if heap == []:
+            print(0)
+        else:
+            print(heapq.heappop(heap))
+    else:
+        heapq.heappush(heap, num)
+        
+  # 노트북에는 잘되는데 왜 제출하면 런타임에러가뜰까...?
