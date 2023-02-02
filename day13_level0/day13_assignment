@@ -1,0 +1,98 @@
+# 잘라서 배열로 저장하기
+
+  ### 도전
+
+def solution(my_str, n):
+  my_str = input()
+  n= int(input())
+  return [my_str[i:i+n] for i in range(0, len(my_str), n)]
+  
+  ### 정답
+
+def solution(my_str, n):
+  return [my_str[i:i+n] for i in range(0, len(my_str), n)]
+  
+  
+  
+# 종이 자르기
+  
+  ### 도전
+  
+def solution(M, N):
+  return ((N-1)*2) + (M-1)
+    
+  ### 정답
+  
+def solution(M, N):
+  return (M*N)-1
+  
+  
+  
+  
+# 문자열 밀기
+
+  ### 뇌정지상태
+  
+def solution(A, B):
+  if A B:
+    return 1
+  elif A B:
+    return -1
+  else:
+    return 0
+    
+  ### 정답
+
+def solution(A, B):
+  # A를 전체 뽑아서 돌린걸 테스트 할 수 있다
+  for idx in range(len(A)): # (len(A)+1) 했더니 원래 단어로 리턴까지 되더라
+    # print(A[idx:]+A[:idx])
+    # A를 밀어서 B가 될 수 있다면 
+    if A == B:
+      # 몇 번 밀어야 하는 최소 횟수를 return하고
+      return idx
+    # 각 문자를 오른쪽으로 한 칸씩 밀고 마지막 문자는 맨 앞으로 이동시키면
+    A = A[-1] + A[:-1]
+  # 밀어서 B가 될 수 없으면 -1을 return 하도록 solution 함수를 완성해보세요.
+  return -1
+
+print(solution('hello', 'ohell'))
+print(solution('apple', 'elppa'))
+print(solution('atat', 'tata'))
+print(solution('abc', 'abc'))
+
+
+    
+# 다음에 올 숫자
+
+  ### 도전
+
+def solution(common):
+  for i in common:
+    if common[1] == common[0] + 1:
+      return common[-1] + 1
+    elif common[1] == common[0] * 2:
+      return common[-1] * 2
+
+print(solution([1,2,3,4]))
+print(solution([2,4,8]))
+
+  ### 정답
+
+def solution(common):
+    difference_1 = common[1] - common[0]
+    difference_2 = common[2] - common[1]
+    
+    if difference_1 == difference_2:
+        return common[-1] + difference_1
+    else:
+        return common[-1] * (common[1]//common[0])
+
+print(solution([1,2,3,4]))
+print(solution([2,4,8]))  
+
+    
+    
+    
+    
+    
