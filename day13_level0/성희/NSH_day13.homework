@@ -1,0 +1,108 @@
+# 잘라서 배열하기
+
+my_str = input()
+n = int(input())
+words = len(my_str)
+s = words // n
+r = words % n
+
+answer = []
+if r != 0:
+    for i in range(s):
+        answer.append(my_str[i*n : (i+1)*n])
+    answer.append(my_str[s*n :])
+else:
+    for i in range(s):
+        answer.append(my_str[i*n : (i+1)*n])
+print(answer)
+
+
+# 문자열 밀기
+
+A = "hello"
+B = "ohels"
+
+A = list(A)
+B = list(B)
+count = 0
+for count in range(len(A)):
+    if A == B:
+        print(count)
+        break
+    else:
+        A.insert(0, A.pop())
+        if count == (len(A)-1):
+            print(-1)
+            
+            
+# 종이 자르기 (이게맞나)
+
+def solution(M, N):
+    answer = (M * N) - 1
+    return answer
+
+# 연속된 수의 합
+num, total = 4, 14
+share = total // num
+remainder = total % num
+print(f'share:{share}, remainder:{remainder}')
+
+count = 0
+answer = []
+if remainder == 0 :
+    answer.append(share)
+    while len(answer) < num:
+        count += 1
+        answer.append(share - count)
+        print(share-count)
+        answer.append(share + count)
+else:
+    answer.append(share)
+    answer.append(share + 1)
+    while len(answer) < num:
+        count += 1
+        answer.append(share - count)
+        answer.append(share+1 + count)
+answer = sorted(answer)
+print(answer)
+
+# 다음에 올 숫자
+
+common = [2, 4, 8]
+count = len(common)
+
+if (common[2] - common[1]) == (common[1] - common[0]): # 등차수열이면
+    result = common[-1] + (common[1] - common[0]) # 마지막에 공차더해
+else:
+    gongbi = common[1] // common[0]
+    result = common[-1] * gongbi
+print(result)
+
+
+# 옹알이
+
+possible = ["aya", "ye", "woo", "ma"]
+pp = []
+
+for idx in range(len(possible)):
+    pp.append(possible[idx])
+    for idx2 in range(len(possible)):
+        pp.append(possible[idx] + possible[idx2])
+        for idx3 in range(len(possible)):
+            pp.append(possible[idx] + possible[idx2] + possible[idx3])
+            for idx4 in range(len(possible)):
+                pp.append(possible[idx] + possible[idx2] + possible[idx3] + possible[idx4])
+                
+count = 0                
+for word in babbling:
+    for p in pp:
+        if word == p:
+            count += 1
+print(count)
+
+
+
+
+
+
+
