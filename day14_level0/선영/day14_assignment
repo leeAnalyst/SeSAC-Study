@@ -18,3 +18,12 @@ def solution(n, t):
   for i in range(0,t):
     answer = n*(2**t)
   return answer
+
+
+# 문자열안에 문자열
+def solution(str1, str2):
+  
+  if str2 in str1:
+    return 1
+  else:
+    return 2
