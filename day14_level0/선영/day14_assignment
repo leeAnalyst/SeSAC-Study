@@ -1,0 +1,29 @@
+# 7의 개수
+def solution(array):
+
+  return str(array).replace("[","").replace("]","").replace(",", "").count('7')
+  
+
+# 문자열 정렬하기(2)
+  my_string = 'heLLO'
+  for i in my_string:
+    a = sorted(my_string.lower())
+    a ="".join(map(str,a))
+  print(a)
+
+
+# 세균증식
+def solution(n, t):
+  answer = 0
+  for i in range(0,t):
+    answer = n*(2**t)
+  return answer
+
+
+# 문자열안에 문자열
+def solution(str1, str2):
+  
+  if str2 in str1:
+    return 1
+  else:
+    return 2
