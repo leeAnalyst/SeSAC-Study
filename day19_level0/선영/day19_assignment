@@ -1,8 +1,8 @@
 # 외계어 사전 
 def solution(spell, dic):
-  spell = set(spell)
+  spell = set(spell)   # 한번씩만 사용, 중복된 원소를 갖지 않음 set
   for i in dic:
-    if spell.issubset(set(i)):
+    if spell.issubset(set(i)):  # dic에 있는 중복되지 않는 요소가 배열 spell의 하위집합이면 1 아니면 2
       return 1
   return 2
   
