@@ -1,8 +1,8 @@
 # 외계어 사전 
 def solution(spell, dic):
-  spell = set(spell)   # 한번씩만 사용, 중복된 원소를 갖지 않음 set
+  spell = set(spell)            # 한번씩만 사용, 중복된 원소를 갖지 않음 set
   for i in dic:
-    if spell.issubset(set(i)):  # dic에 있는 중복되지 않는 요소가 배열 spell의 하위집합이면 1 아니면 2
+    if spell.issubset(set(i)):  # dic에 있는 중복되지 않는 요소들이 배열 spell의 하위집합이면(spell에 답긴 알파벳모두사용) 1 아니면 2
       return 1
   return 2
   
@@ -26,5 +26,5 @@ def solution(my_string):
 
 # 최댓값 만들기(2)
 def solution(numbers):
-    numbers.sort(reverse = True)
-    return max(numbers[0] * numbers[1],numbers[-1] * numbers[-2])
+    numbers.sort(reverse = True)                                    # 숫자리스트를 내림차순으로 정렬하여...(절대값순 정렬은 의미 없더라...)
+    return max(numbers[0] * numbers[1],numbers[-1] * numbers[-2])   # 가장큰수와 그다음 큰수의 곱과, 가장작은 수(음수)와 그 다음 작은수(음수)의 곱 중에 최대값 반환
