@@ -1,0 +1,15 @@
+# 문자열 정렬하기 (1)
+import re
+
+def solution(my_string):
+  result = re.findall(r'\d', my_string)
+  answer = [int (i) for i in result]
+  return sorted(answer)
+  
+
+# 모음제거
+import re
+
+def solution(my_string):
+  answer = re.sub("a|e|i|o|u", "", my_string)
+  return answer
