@@ -1,0 +1,24 @@
+# 외계행성의 나이
+a = {'0' : 'a', '1' : 'b', '2':'c', '3':'d', '4':'e', '5':'f', '6': 'g', '7':'h', '8':'i', '9':'j'}
+def solution(age):
+    answer = []
+    for i in (list(str(age))):
+      if i in a:
+        answer.append(a.get(i))
+    return ''.join(answer)
+    
+    
+# 배열 자르기
+def solution(numbers, num1, num2):
+    return numbers[num1:num2+1]
+
+
+# 짝수의 합
+def solution(n):
+    return sum([i for i in range(2, n+1, 2)])
+    
+    
+# 양꼬치
+def solution(n, k):
+  service = n//10
+  return (n * 12000) + (k * 2000) - (service * 2000)
